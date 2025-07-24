@@ -1,0 +1,33 @@
+name: qoala
+
+config-version: 2
+
+profile: haydar
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+docs-paths: ["docs"]
+asset-paths: ["assets"]
+
+packages-install-path: packages
+
+clean-targets: ["target"]
+
+query-comment: string
+
+require-dbt-version: ">=1.10.0"
+
+quoting:
+  database: false
+  schema: false
+  identifier: false
+  
+models:
+  qoala:
+    dw:
+      +materialized: table
+      +schema: dw

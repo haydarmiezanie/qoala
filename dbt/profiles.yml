@@ -1,0 +1,9 @@
+haydar:
+  target: prod
+  outputs:
+    prod:
+      type: duckdb
+      path: "/opt/airflow/database/tmdb_movies_and_series.duckdb" # C:/Users/Haidar/Desktop/qoala/database/tmdb_movies_and_series.duckdb
+      extension:
+        - spatial
+      threads: 3

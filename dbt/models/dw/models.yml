@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_country
+    description: "Dimension table for countries"
+    columns:
+      - name: country_code
+        description: "Unique identifier for the country"
+        tests:
+          - unique
+          - not_null
+      - name: country_name
+        description: "Name of the country"
+  - name: dim_genre
+    description: "Dimension table for genres"
+    columns:
+      - name: genre_id
+        description: "Unique identifier for the genre"
+        tests:
+          - unique
+          - not_null
+      - name: genre_name
+        description: "Name of the genre"
+  - name: fact_title
+    description: "Fact table for titles"
+    columns:
+      - name: title_id
+        description: "Unique identifier for the title"
+        tests:
+          - unique
+          - not_null
+      - name: title_name
+        description: "Name of the title"
+      - name: release_date
+        description: "Release date of the title"
+      - name: genre_id
+        description: "Foreign key to the genre dimension"

@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: main
+    tables:
+      - name: movies
+        description: "Movies data from TMDB"
+      - name: series
+        description: "Series data from TMDB"

@@ -1,0 +1,5 @@
+kagglehub
+duckdb
+pandas
+dbt-core
+dbt-duckdb
